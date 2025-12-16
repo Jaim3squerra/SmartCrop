@@ -1,0 +1,20 @@
+# Virtual environments
+venv/
+env/
+smartcrop_venv/
+
+# Python artifacts
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+
+# Packaging
+dist/
+build/
+*.egg-info/
+
+# Editor / OS
+.DS_Store
+.vscode/
+*.swp

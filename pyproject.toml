@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smartcrop"
+version = "0.1.0"
+description = "Monitor de temperatura y control de relé para Raspberry Pi (DHT11/DHT22 + GPIO)"
+readme = "README.md"
+authors = [ { name = "William Retamal + Danae Soto + notengoelnombre" } ]
+requires-python = ">=3.8"
+dependencies = [
+    "adafruit-circuitpython-dht",
+    "RPi.GPIO"
+]
+
+[project.urls]
+Homepage = "https://github.com/Jaim3squerra/SmartCrop"
+
+[project.scripts]
+smartcrop-monitor = "scripts.monitor:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["smartcrop"]

@@ -1,0 +1,13 @@
+[Unit]
+Description=SmartCrop temperature monitor
+After=network.target
+
+[Service]
+Type=simple
+# Ejecutar como root o usuario con permisos para GPIO
+User=root
+ExecStart=/usr/bin/env smartcrop-monitor --sensor-pin D4 --sensor-type DHT11 --relay-pin 17 --threshold 30.0
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

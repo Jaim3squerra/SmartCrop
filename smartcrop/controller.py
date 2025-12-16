@@ -24,10 +24,15 @@ class RelayController:
         self.pin = int(pin)
         self.active_low = bool(active_low)
         self._setup_gpio()
+        # Asegurar estado apagado al iniciar
+        self.off()
 
     def _setup_gpio(self) -> None:
         GPIO.setmode(GPIO.BCM)
-        inactive = GPIO.HIGH if not self.active_low else GPIO.LOW
+        # Seguir la convención de `pruebas_reles.py`:
+        # - si active_low == False: ACTIVE = HIGH, INACTIVE = LOW
+        # - si active_low == True:  ACTIVE = LOW,  INACTIVE = HIGH
+        inactive = GPIO.LOW if not self.active_low else GPIO.HIGH
         GPIO.setup(self.pin, GPIO.OUT, initial=inactive)
 
     def on(self) -> None:

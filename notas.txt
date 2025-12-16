@@ -1,1 +1,22 @@
-* Instalación 
+************ Configuración de Raspberry Pi ************
+
+*** Raspberry Pi 4 con Raspberry Pi OS ***
+	- Usuario: pi
+	- Contraseña: inacap
+	- Dirección IP (fija en puerto ethernet): 192.168.174.25 (la pueden cambiar en "sudo nmtui")
+
+* Librerias instaladas:
+	# Sistema global
+	- python3 (por defecto ya viene instalado)
+	- python3-rpi.gpio
+	- python3-pip
+	- python3-dev
+	- build-essential
+	- git
+	- python3-venv
+	- python3-full
+	- libgpiod-dev
+	#dht_venv (entorno virtual, librerias con pip3)
+	- adafruit-circuitpython-dht
+	- adafruit-blinka
+	

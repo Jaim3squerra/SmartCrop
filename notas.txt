@@ -19,4 +19,4 @@
 	#dht_venv (entorno virtual, librerias con pip3)
 	- adafruit-circuitpython-dht
 	- adafruit-blinka
-	
+	- adafruit-circuitpython-mcp3xxx
